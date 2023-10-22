@@ -48,26 +48,24 @@ fun GridItem(label: String, imageResource: Int) {
     Box(
         modifier = Modifier
             .padding(6.dp)
-            .fillMaxWidth() // Make each box take up the full width of the column
+            .fillMaxWidth()
             .height(200.dp)
             .background(Color.LightGray)
     ) {
         Column(
             modifier = Modifier.fillMaxSize(),
             verticalArrangement = Arrangement.Center,
-            horizontalAlignment = Alignment.CenterHorizontally // Center both text elements horizontally
+            horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            // Image on the left side
             Image(
                 painter = painterResource(id = imageResource),
                 contentDescription = null,
                 modifier = Modifier
-                    .size(120.dp) // Adjust the image size as needed
+                    .size(120.dp)
             )
 
-            Spacer(modifier = Modifier.height(4.dp)) // Add some spacing between image and text
+            Spacer(modifier = Modifier.height(4.dp))
 
-            // Text on the right side
             Text(
                 text = label,
                 modifier = Modifier.padding(4.dp),
@@ -75,9 +73,8 @@ fun GridItem(label: String, imageResource: Int) {
                 textAlign = TextAlign.Center
             )
 
-            Spacer(modifier = Modifier.height(4.dp)) // Add some spacing between text and additional text
+            Spacer(modifier = Modifier.height(4.dp))
 
-            // Additional text below
             Text(
                 text = "3 SKS",
                 modifier = Modifier.padding(4.dp),
